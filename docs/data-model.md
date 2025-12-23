@@ -8,8 +8,6 @@ This project uses three core collections:
 
 The model is designed around **idempotency** and **auditability**.
 
----
-
 ## orders
 
 ### Purpose
@@ -27,8 +25,6 @@ Represents a Shopify order and acts as the parent entity for all generated plate
 
 ### Indexing
 - Unique index on `orderNumber` is required for idempotent upsert.
-
----
 
 ## plates
 
@@ -57,8 +53,6 @@ This ensures that generating the same plates again results in duplicates being r
 - Unique index on `slug` (public uniqueness)
 - Unique + indexed `sourceKey` (idempotency and fast lookup)
 
----
-
 ## webhook-events
 
 ### Purpose
@@ -82,16 +76,12 @@ Tracks each Shopify webhook delivery for:
 ### Indexing
 - Unique index on `webhookId` is critical for anti-replay.
 
----
-
 ## Relationships
 
 - One `order` has many `plates`
 - Each `plate` belongs to one `order`
 
 `webhook-events` is intentionally decoupled from orders to remain a delivery-level log.
-
----
 
 ## Notes / trade-offs
 
