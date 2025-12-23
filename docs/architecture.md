@@ -143,8 +143,9 @@ re-running it must never create duplicates.
 
 Plates are generated using a deterministic idempotency key:
 
+```bash
 sourceKey = ${orderNumber}|${lineItemId}|${index}
-
+```
 This guarantees:
 
 - No duplicate plates on webhook retries
