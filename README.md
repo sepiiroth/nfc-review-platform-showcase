@@ -112,8 +112,6 @@ More details: see `docs/data-model.md`.
 
 ---
 
----
-
 ## Technical Documentation
 
 This repository includes detailed technical documentation to explain
@@ -131,11 +129,6 @@ the architectural choices, data model, and operational behavior.
   `docs/data-model.md`  
   Collections, invariants, and relationships.
 
-- **Runbook**  
-  `docs/runbook.md`  
-  How to operate, debug, and maintain the system in production.
-
-
 ## Files to review
 
 - Webhook handler: `src/webhook/orders-paid.endpoint.ts`
@@ -150,15 +143,6 @@ the architectural choices, data model, and operational behavior.
 
 ---
 
-## Local testing (anonymized)
-
-This repo is not a full runnable app; it focuses on the core integration logic.
-
-- Example payload: `examples/shopify-webhook-payload.sample.json`
-- Environment template: `examples/env.example`
-
----
-
 ## Roadmap
 
 - V2: redirect analytics (count scans per plate)
@@ -169,4 +153,4 @@ This repo is not a full runnable app; it focuses on the core integration logic.
 
 ## Author
 
-Rafael — Frontend/Fullstack developer (React/Next + backend integrations)
+Sepiiroth 
